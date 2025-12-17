@@ -16,7 +16,7 @@ fetch(API_URL)
 
         let accroche = document.getElementById("accroche");
 
-        let card = document.createElement("div");
+        // let card = document.createElement("div");
         // Etape 3 : nom de l'entreprise (h1),slogan (H2) et les boutons
         let titre = document.createElement("h1");
         titre.textContent = data.entreprise;
@@ -44,12 +44,12 @@ fetch(API_URL)
 
         data.promessesClients.forEach(promesse => {
 
-            let promesses = document.createElement("p")
-            promesses.textContent = promesse
+            let promesses = document.createElement("p");
+            promesses.textContent = promesse;
             console.log(promesses);
         });
 
-        const logo = document.getElementById("logo")
+        const logo = document.getElementById("logo");
 
 
         // Section realisations
@@ -57,15 +57,16 @@ fetch(API_URL)
         data.realisations.forEach(element => {
 
             // ETAPE 4 : Pour chaque élement du tableau "réalisation"créer une DIV
+         let card = document.createElement("div");
 
 
             // - Créer un titre (h3) pour afficher le nom
             let title = document.createElement("h3");
-            title.textContent = element.title
+            title.textContent = element.title;
             console.log(title);
             // - Créer un paragraphe (p) pour la description
             let paragraphe = document.createElement("p");
-            paragraphe.textContent = element.description
+            paragraphe.textContent = element.description;
             console.log(paragraphe);
 
 
@@ -79,37 +80,53 @@ fetch(API_URL)
             // ETAPE 5 : Envoyer dans le HTML les élements crées (appenchild)
 
             container.appendChild(card);
+            card.appendChild(image);
             card.appendChild(title);
             card.appendChild(paragraphe);
-            card.appendChild(image);
+
         });
 
 
         // Section Temoignages
 
         data.temoignages.forEach(temoi => {
-
+            let div = document.createElement("div");
 
             // - Créer un titre (h3) pour afficher le prénom
-            let name = document.createElement("h3")
-            name.textContent = temoi.prenom
+            let name = document.createElement("h3");
+            name.textContent = temoi.prenom;
             console.log(name);
 
             // - Créer un titre (h4) pour afficher le type de prestation
-            let presta = document.createElement("h4")
-            presta.textContent = temoi.typePrestation
+            let presta = document.createElement("h4");
+            presta.textContent = temoi.typePrestation;
             console.log(presta);
 
 
             // - Créer un paragraphe (p) pour les commentaires
+            console.log(temoi);
+            console.log(temoi.commentaire);
+            
+            let commantaire = document.createElement("p");
+           
+            
+            commantaire.textContent = temoi.commentaire;
+          
 
-            let commantaire = document.createElement("p")
-            commantaire.textContent = temoi.note
-            console.log(commantaire);
+
+            let note = document.createElement("p");
+            note.textContent = temoi.note;
+            console.log(note);
+
 
             // ETAPE 7 : Envoyer dans le HTML les élements crées (appenchild)
 
-
+            let test = document.getElementById("avis");
+            test.appendChild(div);
+            div.appendChild(name);
+            div.appendChild(presta);
+            div.appendChild(commantaire);
+            div.appendChild(note);
 
 
         });
