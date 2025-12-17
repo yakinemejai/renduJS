@@ -20,15 +20,21 @@ fetch(API_URL)
         // Etape 3 : nom de l'entreprise (h1),slogan (H2) et les boutons
         let titre = document.createElement("h1");
         titre.textContent = data.entreprise;
+        titre.classList.add("h1")
         let slogan = document.createElement("p");
         slogan.textContent = data.propositionDeValeur;
+        slogan.classList.add("p")
         let boutton = document.createElement("button");
         boutton.textContent = data.texteBouton;
+        boutton.classList.add("button");
+
+
+
 
         accroche.appendChild(titre);
         accroche.appendChild(slogan);
         accroche.appendChild(boutton);
-        
+
 
 
 
@@ -107,6 +113,6 @@ fetch(API_URL)
 
 
         });
-        
+
 
     });

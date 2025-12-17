@@ -1,7 +1,17 @@
 * {
-
   list-style-type: none;
+background-color:  #F5F1EB;
+}
+h2{
+ color: #5A3A1E;
 
+}
+h1{
+  color: #5A3A1E;
+  font-family: "Playfair Display", serif;
+}
+p{
+  color: #2E2E2E;
 }
 nav {
   display: flex;
@@ -22,15 +32,27 @@ nav {
     color: inherit;
   }
 
+
 }
 
+#btn{
+  height: auto;
+  color: #C28E3D;
+ font-family: "Roboto", sans-serif;
+border-radius: 10px;
+ 
+}
+#hero{
+  display: flex;
+  justify-content: center;
+  
+}
 
-
-
-/* #element {
-  padding: auto;
-  margin: auto;
-} */
+.button{
+  color: #C28E3D;
+  font-family: "Roboto", sans-serif;
+  border-radius: 10px;
+}
 
 img {
   width: 350px;
