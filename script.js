@@ -18,7 +18,7 @@ fetch(API_URL)
 
         let card = document.createElement("div");
         // Etape 3 : nom de l'entreprise (h1),slogan (H2) et les boutons
-        let titre = document.createElement("h2");
+        let titre = document.createElement("h1");
         titre.textContent = data.entreprise;
         let slogan = document.createElement("p");
         slogan.textContent = data.propositionDeValeur;
